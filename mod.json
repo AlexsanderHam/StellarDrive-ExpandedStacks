@@ -1,0 +1,7 @@
+{
+  "id": "expanded_stacks",
+  "name": "Expanded Stacks",
+  "author": "AlexsanderHam",
+  "version": "1.0.0",
+  "description": "Increases max stack size for all items to 255."
+}

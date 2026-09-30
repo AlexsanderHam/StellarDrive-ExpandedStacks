@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<RootNamespace>ExpandedStacks</RootNamespace>
+		<AssemblyName>ExpandedStacks</AssemblyName>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="MelonLoader">
+			<HintPath>c:\Program Files (x86)\Steam\steamapps\common\StellarDrive Demo\MelonLoader\net35\MelonLoader.dll</HintPath>
+		</Reference>
+		<Reference Include="0Harmony">
+			<HintPath>c:\Program Files (x86)\Steam\steamapps\common\StellarDrive Demo\MelonLoader\net35\0Harmony.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>c:\Program Files (x86)\Steam\steamapps\common\StellarDrive Demo\StellarDrive_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Items.Model">
+			<HintPath>c:\Program Files (x86)\Steam\steamapps\common\StellarDrive Demo\StellarDrive_Data\Managed\Items.Model.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="COPY &quot;$(TargetPath)&quot; &quot;c:\Program Files (x86)\Steam\steamapps\common\StellarDrive Demo\Mods&quot;" />
+	</Target>
+</Project>
