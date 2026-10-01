@@ -3,5 +3,7 @@
   "name": "Expanded Stacks",
   "author": "AlexsanderHam",
   "version": "1.0.0",
-  "description": "Increases max stack size for all items to 255."
+  "description": "Increases max stack size for all items to 255.",
+  "thumbnail": "thumbnail.png",
+  "images": []
 }

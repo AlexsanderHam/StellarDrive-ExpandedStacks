@@ -1,16 +1,8 @@
-﻿using MelonLoader;
 using HarmonyLib;
 using Items.Model;
 
-[assembly: MelonInfo(typeof(ExpandedStacks.ExpandedStacksMod), "Expanded Stacks", "1.0.0", "AlexsanderHam", null)]
-[assembly: MelonGame("CuriousOwlGames", "StellarDrive")]
-
-namespace ExpandedStacks
+namespace ExpandedStacks.Patches
 {
-    public class ExpandedStacksMod : MelonMod
-    {
-    }
-
     [HarmonyPatch(typeof(ItemSettingsList), "ResetDict")]
     public static class MaxStackPatch
     {
